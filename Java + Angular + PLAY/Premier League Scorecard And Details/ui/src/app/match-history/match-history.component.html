@@ -1,0 +1,51 @@
+
+<div class="searchButton">
+
+  <mat-form-field appearance="fill" MatFormFieldControl >
+    <mat-label>Choose a date</mat-label>
+    <input matInput  type="date" [(ngModel)]="DateSelected"  >
+  </mat-form-field>
+  <button mat-mini-fab  class="btn" (click)="applyFilter()">
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+
+  <button mat-fab aria-label="Example icon-button with a heart icon" (click)="getSortedList()">Sort Date
+    <mat-icon>sort</mat-icon>
+  </button>
+
+<div>
+
+
+<table mat-table [dataSource]="Matches" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Home Club">
+      <th mat-header-cell *matHeaderCellDef> Home Club </th>
+      <td mat-cell *matCellDef="let Match"> {{Match.clubHome}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Home Score">
+      <th mat-header-cell *matHeaderCellDef> Home Score </th>
+      <td mat-cell *matCellDef="let Match"> {{Match.clubHomeScore}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let Match"> {{Match.matchDate | date:'dd-MM-yyy'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Away Score">
+      <th mat-header-cell *matHeaderCellDef> Away Score </th>
+      <td mat-cell *matCellDef="let Match"> {{Match.clubAwayScore }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Away Club">
+      <th mat-header-cell *matHeaderCellDef> Away Club </th>
+      <td mat-cell *matCellDef="let Match"> {{Match.clubAway }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+

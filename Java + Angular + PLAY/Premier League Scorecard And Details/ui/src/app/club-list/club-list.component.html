@@ -1,0 +1,19 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" >
+  <div fxFlex="25%"  *ngFor="let Footballclub of FootBallClubs">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>{{Footballclub.clubName}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="./../assets/{{Footballclub.clubName}}.png" />
+      <mat-card-content>
+        <p>{{Footballclub.clubName}} is a one of the <strong>{{Footballclub.clubType}}</strong> club which <br>
+          participate in Premier League.<br>
+          {{Footballclub.clubName}} is located in <strong>{{Footballclub.clubLocation}}</strong>. This club was <br>
+          Founded in <strong>{{Footballclub.clubFoundedYear}}</strong>.
+          It has <strong>{{Footballclub.clubMemberCount}}</strong> members Participating.
+
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

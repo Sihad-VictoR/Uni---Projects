@@ -1,0 +1,13 @@
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  align-items: center;
+  width: 100px;
+}
+img{
+  width: 200px;
+
+}

@@ -1,0 +1,35 @@
+.toolbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: #18a3a3;
+    color: rgb(8, 8, 8);
+    font-weight: 600;
+
+  }
+  .footer{
+    margin-bottom: auto;
+    background-color: cadetblue;
+    height: 200px;
+  }
+
+  nav a.active{
+      color: rgb(44, 101, 187);
+
+  }
+  .topnav-centered a {
+    word-spacing: 10px;
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 33%;
+  margin: 0 auto;
+
+  }
+  .toolbar img {
+    margin: 0 16px;
+  }
+

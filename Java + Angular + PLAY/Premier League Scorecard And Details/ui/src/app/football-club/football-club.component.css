@@ -1,0 +1,85 @@
+table {
+
+    width: 80%;
+  max-height: 200px;
+  margin: 50px auto 50px;
+  background: transparent;
+
+}
+
+.mat-header-cell {
+  background-color: #393939;
+  color: white;
+}
+.mat-row {
+  height: 3em;
+}
+.mat-column-Club-Name{
+  word-wrap: break-word !important;
+  white-space: unset !important;
+
+  width: 50% !important;
+
+}
+  .mat-column-MP{
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 50% !important;
+    width: 5% !important;
+
+  }
+
+  .mat-column-W {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 17% !important;
+    width: 5% !important;
+
+  }
+
+  .mat-column-D  {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 8% !important;
+    width: 5% !important;
+
+  }
+.mat-column-L {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 8% !important;
+  width: 5% !important;
+
+}
+.mat-column-GF {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 8% !important;
+  width: 5% !important;
+
+}
+.mat-column-GA {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 8% !important;
+  width: 5% !important;
+
+}
+.mat-column-GD {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 8% !important;
+  width: 5% !important;
+
+}
+
+  mat-form-field {
+    margin-right: 150px;
+    float: right;
+    margin-top: 40px;
+  }
+
+  button{
+    margin-top: 50px;
+    margin-left: 200px;
+  }

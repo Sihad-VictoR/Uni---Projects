@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Random Match</h2>
+<mat-dialog-content>
+
+  <div *ngIf="newMatch?.length > 0">
+
+        <table >
+          <thead>
+          <th>Home Club</th>
+          <th>Home Score</th>
+          <th>Date</th>
+          <th>Away Score</th>
+          <th>Away Club</th>
+
+          </thead>
+          <tbody>
+          <tr *ngFor = "let Match of newMatch">
+            <td> {{ Match.clubHome }} </td>
+            <td> {{ Match.clubHomeScore }} </td>
+            <td> {{ Match.matchDate | date:'dd-MM-yyy'}} </td>
+            <td> {{ Match.clubAwayScore}} </td>
+            <td> {{ Match.clubAway}} </td>
+
+          </tr>
+          </tbody>
+        </table>
+      </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,71 @@
+
+<button mat-raised-button (click)="openDialog()">Auto Generate</button>
+<mat-form-field>
+    <mat-label>Sort By</mat-label>
+    <mat-select [(ngModel)] = "selectedValue" (ngModelChange)="onChange()">
+        <mat-option value="points">Points</mat-option>
+        <mat-option value="wins">Wins</mat-option>
+        <mat-option value="goals">Goal Scored</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<div>
+
+
+    <table mat-table [dataSource]="FootBallClubs" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="Club-Name">
+          <th mat-header-cell *matHeaderCellDef> Club Name </th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.clubName }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="MP">
+          <th mat-header-cell *matHeaderCellDef> MP</th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.fCMatchesPlayed }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="W">
+          <th mat-header-cell *matHeaderCellDef> W </th>
+          <td mat-cell *matCellDef="let Footballclub ">{{ Footballclub.fCWins }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="D">
+          <th mat-header-cell *matHeaderCellDef> D </th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.fCDraws }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="L">
+          <th mat-header-cell *matHeaderCellDef> L </th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.fCDefeats }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="GF">
+          <th mat-header-cell *matHeaderCellDef> GF </th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.fCGoals  }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="GA">
+          <th mat-header-cell *matHeaderCellDef> GA </th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.fCAgainstGoals }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="GD">
+          <th mat-header-cell *matHeaderCellDef> GD </th>
+          <td mat-cell *matCellDef="let Footballclub "> {{ Footballclub.fCGoalDifference }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Pts">
+          <th mat-header-cell *matHeaderCellDef> Pts </th>
+          <td mat-cell *matCellDef="let Footballclub "> <strong>{{ Footballclub.fCPoints }} </strong></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+
+
+
+
+
+
