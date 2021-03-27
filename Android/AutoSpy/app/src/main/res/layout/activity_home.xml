@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@drawable/common_background">
+
+    <ImageView
+        android:id="@+id/homeActitvityWheels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wheel"
+        android:contentDescription="@string/homeactivityimages" />
+
+    <TextView
+        android:id="@+id/homeActivityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/auto_spy"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/homeActitvityWheels"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/homeActivityMusicBtn"
+        android:layout_width="70dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#977BB6"
+        android:contentDescription="@string/musiconoff"
+        android:onClick="setMusic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toEndOf="@+id/homeActivityTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/music" />
+
+    <ImageButton
+        android:id="@+id/homeActivityCarMakeBtn"
+        android:layout_width="166dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="12dp"
+        android:background="#FAFCEF"
+        android:contentDescription="@string/homeactivityimages"
+        android:onClick="startCarMakeActivity"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/homeActivityHintsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeActivitySwitch"
+        app:layout_constraintVertical_bias="0.835"
+        app:srcCompat="@drawable/carmake_image" />
+
+    <ImageButton
+        android:id="@+id/homeActivityHintsBtn"
+        android:layout_width="166dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="startHintsActivity"
+        android:layout_marginBottom="168dp"
+        android:background="#FAFCEF"
+        android:contentDescription="@string/homeactivityimages"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/homeActivityAdvancedLvlBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeActivityCarImageBtn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/hints_image" />
+
+    <ImageButton
+        android:id="@+id/homeActivityCarImageBtn"
+        android:layout_width="166dp"
+        android:layout_height="141dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FAFCEF"
+        android:contentDescription="@string/homeactivityimages"
+        android:onClick="startCarImageActivity"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/homeActivityAdvancedLvlBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/homeActivityCarMakeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/homeActivityMusicBtn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/carimage_image" />
+
+    <ImageButton
+        android:id="@+id/homeActivityAdvancedLvlBtn"
+        android:layout_width="166dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="168dp"
+        android:background="#FAFCEF"
+        android:onClick="startAdvancedLvlActivity"
+        android:contentDescription="@string/homeactivityimages"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeActivityMusicBtn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/advancedlevel_image" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/homeActivitySwitch"
+        android:layout_width="126dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="@string/timer"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/homeActivityCarImageBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeActivityMusicBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

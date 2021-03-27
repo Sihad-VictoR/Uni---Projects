@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Auto Spy</string>
+    <string name="musiconoff">musicONOFF</string>
+    <string name="auto_spy">Auto Spy</string>
+    <string name="homeactivityimages">homeActivityImages</string>
+    <string name="timer">Timer</string>
+    <string name="helpViewContent"><b>1.Identify the Car Make</b>\n
+        Use the Spinner to Select the <b>CORRECT</b> brand of the car shown in the image\n
+    then Select Identify Button , Your result will be shown and Click the <b>NEXT</b> \n button
+    to move to next question.</string>
+    <string name="helpViewheading">App Modes</string>
+    <string name="identify">Identify</string>
+    <string name="enter_word_hint">   Enter..</string>
+    <string name="submit">Submit</string>
+
+
+    <string-array name="carName_array">
+        <item>BMW</item>
+        <item>Audi</item>
+        <item>Mercedes</item>
+        <item>Toyota</item>
+        <item>AstonMartin</item>
+        <item>Honda</item>
+        <item>Bugatti</item>
+        <item>Ferrari</item>
+        <item>Lamborghini</item>
+        <item>Mazda</item>
+        <item>McLaren</item>
+        <item>Chevrolet</item>
+        <item>Porsche</item>
+        <item>Volkswagen</item>
+    </string-array>
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_background"
+    tools:context=".AdvancedLevelActivity">
+
+    <TextView
+        android:id="@+id/advancedLvlActivityTimerView"
+        android:layout_width="196dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-black"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Timer:" />
+
+    <TextView
+        android:id="@+id/advancedLvlActivityScoreView"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:text="Score :"
+        android:textColor="#0026FB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityTimerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/advancedLvlActivityImageView1"
+        android:layout_width="175dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityTimerView"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/advancedLvlActivityImageView2"
+        android:layout_width="175dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityImageView1"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityResultView"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/advancedLvlActivityImageView3"
+        android:layout_width="175dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityScoreView"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <EditText
+        android:id="@+id/advancedLvlActivityInputView1"
+        android:layout_width="176dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_corner"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="@string/enter_word_hint"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityImageView1" />
+
+    <EditText
+        android:id="@+id/advancedLvlActivityInputView2"
+        android:layout_width="176dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_corner"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="@string/enter_word_hint"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityInputView1"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityImageView2" />
+
+    <EditText
+        android:id="@+id/advancedLvlActivityInputView3"
+        android:layout_width="176dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_corner"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="@string/enter_word_hint"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityInputView2"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityImageView3" />
+
+    <TextView
+        android:id="@+id/advancedLvlActivityAnswerView1"
+        android:layout_width="115dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityInputView1" />
+
+    <TextView
+        android:id="@+id/advancedLvlActivityAnswerView2"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityAnswerView1"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityInputView2" />
+
+    <TextView
+        android:id="@+id/advancedLvlActivityAnswerView3"
+        android:layout_width="115dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityAnswerView2"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityInputView3" />
+
+    <TextView
+        android:id="@+id/advancedLvlActivityResultView"
+        android:layout_width="136dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/advancedLvlActivityScoreView"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityTimerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/advancedLvlActivitySubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:onClick="submitButton"
+        android:text="@string/submit"
+        android:textColor="#0B0A0A"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/advancedLvlActivityAnswerView3"
+        app:layout_constraintTop_toBottomOf="@+id/advancedLvlActivityInputView3"
+        app:layout_constraintVertical_bias="0.714" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
