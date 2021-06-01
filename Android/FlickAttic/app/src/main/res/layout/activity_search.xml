@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/search_movie">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_search_movies"
+        android:layout_width="match_parent"
+        android:layout_height="698dp"
+        android:layout_marginTop="160dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/search_editView"
+        android:layout_width="268dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="110dp"
+        android:completionHint="Enter Search item.."
+        android:hint="Enter Search item.."
+        android:inputType="textPersonName"
+        android:textColor="#150909"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginRight="16dp"
+        android:text="Search" />
+
+
+</RelativeLayout>

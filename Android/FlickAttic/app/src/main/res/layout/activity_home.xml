@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="343dp"
+        android:layout_height="419dp"
+        android:background="@drawable/image"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="20dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.686">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/app_name"
+            android:textSize="53sp"
+            android:translationX="65dp" />
+
+        <Button
+            android:id="@+id/registerBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="236dp"
+            android:layout_height="49dp"
+            android:text="@string/register_movie_btn_text"
+            android:textColor="#0C0B0B"
+            android:translationX="40dp"
+            app:backgroundTint="#03A9F4" />
+
+        <Button
+            android:id="@+id/displayBtn"
+            android:layout_width="236dp"
+            android:layout_height="49dp"
+            android:text="@string/display_movies_btn_text"
+            android:textColor="#0C0B0B"
+            android:translationX="40dp"
+            app:backgroundTint="#03A9F4" />
+
+        <Button
+            android:id="@+id/favoriteBtn"
+            android:layout_width="236dp"
+            android:layout_height="49dp"
+            android:text="@string/favourites_btn_text"
+            android:textColor="#000000"
+            android:translationX="40dp"
+            app:backgroundTint="#03A9F4" />
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="236dp"
+            android:layout_height="49dp"
+            android:text="@string/edit_movies_btn_text"
+            android:textColor="#0C0B0B"
+            android:translationX="40dp"
+            app:backgroundTint="#03A9F4" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="236dp"
+            android:layout_height="49dp"
+            android:text="@string/search_btn_text"
+            android:textColor="#000000"
+            android:translationX="40dp"
+            app:backgroundTint="#03A9F4" />
+
+        <Button
+            android:id="@+id/imdbBtn"
+            android:layout_width="236dp"
+            android:layout_height="49dp"
+            android:text="@string/ratings_btn_text"
+            android:textColor="#0C0B0B"
+            android:translationX="40dp"
+            app:backgroundTint="#03A9F4" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

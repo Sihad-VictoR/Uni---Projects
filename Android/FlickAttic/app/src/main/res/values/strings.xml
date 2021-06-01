@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Flick Attic</string>
+    <string name="register_movie_btn_text">Register Movie</string>
+    <string name="display_movies_btn_text">Display Movies</string>
+    <string name="favourites_btn_text">Favourites</string>
+    <string name="edit_movies_btn_text">Edit Movies</string>
+    <string name="search_btn_text">Search</string>
+    <string name="ratings_btn_text">Ratings</string>
+</resources>
