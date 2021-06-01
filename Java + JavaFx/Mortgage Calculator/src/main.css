@@ -1,0 +1,48 @@
+.button{
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-image-radius: 15 15 15 15;
+    -fx-cursor: hand;
+}
+.button:pressed{
+    -fx-background-color: black;
+    }
+
+.button:hover{
+
+    -fx-effect: dropshadow(two-pass-box , #9d6079, 10, 0.0 , 4, 5);
+}
+#help{
+    -fx-background-radius: 30 30 30 30;
+    -fx-background-color:#1E90FF;
+}
+
+#bt3 {
+    -fx-background-image: url('savings.png');
+    -fx-background-size: 220px 54px;
+    -fx-background-repeat: no-repeat;
+
+}
+#bt2 {
+    -fx-background-image: url('cisavings.png');
+    -fx-background-size: 220px 54px;
+    -fx-background-repeat: no-repeat;
+
+}
+#bt4 {
+    -fx-background-image: url('mortgage.png');
+    -fx-background-size: 220px 54px;
+    -fx-background-repeat: no-repeat;
+
+}
+#bt1 {
+    -fx-background-image: url('loan.png');
+    -fx-background-size: 220px 54px;
+    -fx-background-repeat: no-repeat;
+}
+#rightPane{
+    -fx-background-color: #E6E6FA;
+}
+#leftPane{
+    -fx-background-color: #9400D3;
+}
+

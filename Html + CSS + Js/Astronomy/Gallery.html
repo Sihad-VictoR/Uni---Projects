@@ -1,0 +1,533 @@
+<html>
+<head>
+<style>
+.brand{
+font-size: 30px;
+color:white;}
+
+a{
+text-decoration: none;
+color: #eee;
+}
+
+.o{ color:red;}
+	
+#header{
+	width: 100%;
+	height: 25vh;
+	overflow: hidden;
+	padding-bottom:20px;
+}
+
+.maincontainer{
+max-width: 120rem;
+width: 90%;
+margin: 0 auto;
+}
+
+
+#headernav{
+	font-size: 15px;
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+.navigation{
+display: flex;
+}
+
+.navigation li{
+list-style: none;
+transform: translateX(100rem);
+animation: slideIn .5s forwards;
+}
+
+.navigation li a{
+padding: 1rem 0;
+margin: 0 3rem;
+position: relative;
+letter-spacing: 2px;
+background:transparent;
+}
+
+.navigation li a:last-child{
+margin-right: 0;
+}
+
+.navigation li a::before,
+.navigation li a::after{
+content: '';
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: crimson;
+left: 0;
+transform: scaleX(0);
+transition: all .5s;
+}
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+
+nav ul li:nth-child(5){
+	animation-delay: 2s;
+}
+
+nav ul li:nth-child(6){
+	animation-delay: 2.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+.navigation li a::before{
+top: 0;
+transform-origin: left;
+}
+
+.navigation li a::after{
+bottom: 0;
+transform-origin: right;
+}
+
+.overlay{
+background-color: rgba(0,0,0,.95);
+position: fixed;
+right: 0;
+left: 0;
+top: 0;
+bottom: 0;
+transition: opacity 650ms;
+transform: scale(0);
+opacity: 0;
+display: none;
+}
+
+.navigation li a:hover::before,
+.navigation li a:hover::after{
+transform: scaleX(1);
+}
+
+@keyframes slideIn {
+from{
+
+}
+to{
+	transform: translateX(0);
+}
+}
+
+@media screen and (max-width: 700px){
+
+.menu-toggle{
+	display: block;
+}
+
+
+
+.navigation{
+	flex-direction: column;
+}
+
+.navigation li{
+	margin-top: 5rem;
+}
+
+.navigation li a{
+	margin: 0;
+	font-size: 2.5rem;
+}
+
+
+.overlay.menu-open,
+#headernav.menu-open{
+  display: flex;
+  transform: scale(1);
+  opacity: 1;
+}
+
+}
+
+
+body {
+ 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body {
+  /* Location of the image */
+   background-image: url("Images/background.jpg");
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 10px;
+  background-color:transparent;
+  padding: 10px;
+  color:black;
+  
+}
+/*#FFFFBF  #98ff98*/
+.grid-container > div {
+	display: flex;
+	background-color:white;
+	
+	  text-align: center;
+	  padding: 20px 10px;
+	  justify-content:center;
+	  
+	  align-items:center;
+  /*font-size: 30px;*/
+}
+
+/*img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}*/
+.item1{
+	grid-column:1/span 2;
+}
+.item2{
+	grid-column:5/span 2;
+}
+.item16{
+	grid-column:3/span 2;
+	visibility:hidden;
+}
+.item3{
+	grid-row:2/2;
+}
+.item4{
+	grid-row:2/2;
+}
+
+.item5{
+	grid-column:3/span 4;
+	grid-row:2/span 3;
+}
+.item6{
+	grid-row:3/3;
+}
+.item7{
+	grid-row:3/3;
+	grid-column:2/2;
+}
+.item8{
+	grid-row:4/4;
+	grid-column:1/1;
+}
+.item9{
+	grid-row:4/4;
+	grid-column:2/2;
+}
+.item17{
+	grid-column:1/span 6;
+}
+
+.img__description {
+  position: absolute;
+  padding:10px;
+  background: black;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 20px;
+  /* transition effect. not necessary */
+  transition: opacity .3s, visibility .4s;
+}
+.w3-col:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+.w3-col:hover{
+  box-shadow: 0 0 10px 1px #ad003d;
+}
+#footer{
+	background-color:black;
+	height:50px;
+	opacity:85%;
+	color:white;
+}
+
+#pgd{
+	padding-top:12.5px;
+	text-align:left;
+	padding-left:10px;
+}
+
+#cpr{
+	text-align:right;
+	padding-right:10px;
+}
+
+/*.mySlides{
+	height:500px;
+}*/
+</style>
+</head>
+<body>
+	<div id="header">
+	<div class="maincontainer">
+		<nav id="headernav">
+			<h1 class="brand">ASTR<span class="o">&#9763;</span>N<span class="o">&#9733;</span>MY </h1>
+			<ul class="navigation">
+				<li><a href="file:///D:/Jaanu%20Private%20Sector/IIT/Web%20Desiging/CourseWork/main.html">Home</a></li>
+				<li><a href="#">PRODUCTS</a></li>
+				<li><a href="#">QUIZ</a></li>
+				<li><a href="file:///D:/Jaanu%20Private%20Sector/IIT/Web%20Desiging/CourseWork/commets.html">COMMENTS</a></li>
+				<li><a href="#">GALLERY</a></li>
+				<li><a href="#">MEMBERS DETAILS</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+	<div class="grid-container" id="main">
+  		<div class="item1">
+  			<label for="pagecolor">Page Color:</label>
+			<select id="pagecolor" name="pagecolor">
+				<option value="default">Default</option>
+				<option value="black">black</option>
+				<option value="pale">pale</option>
+				<option value="green">Green</option>
+			</select>
+		</div>
+		<div id="background"  class="item16">
+		</div>
+		<div class="item2">
+  			<label for="textcolor">Text Color:</label>
+			<select id="textcolor" name="textcolor">
+				<option value="default">Default</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="green">Green</option>
+			</select>
+		</div>
+		<div id="background"  class="item3">
+  			<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img1.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(1)"><p class="img__description">A sparkling sea of galaxies</p>
+		    </div>
+		</div>
+		<div id="background"  class="item4">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img2.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(2)"><p class="img__description">Comet NEOWISE</p>
+		    </div>
+  			
+		</div>
+		<div id="background"  class="item6">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img3.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(3)"><p class="img__description">Solar campfires</p>
+		    </div>
+		</div>
+		<div id="background"  class="item5">
+			<div class="mySlides">
+	  			<img   src="Images/img1.jpg" style="width:100%;max-width:500px;max-height:500px;"><h2>A sparkling sea of galaxies</h2><p style="font-size:20px;">A sparkling galaxy shines in this image from the NASA/ESA Hubble Space Telescope. The galaxy, known as PGC 29388, glimmers amidst a sea of more distant galaxies. It is a dwarf elliptical galaxy, named as such because it is “small” (relatively speaking) with “only” about 100 million to a few billion stars.
+	  			</p>
+  			</div>
+  			<div class="mySlides" style="display:none">
+  			<img src="Images/img2.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>Comet NEOWISE</h2><p style="font-size:20px;">This images shows the twin tails of Comet NEOWISE, as they appeared on July 5. The image, created by processing data from the WISPR instrument on NASA's Parker Solar Probe, shows a larger comet tail made up of dust and gas and a thin, upper ion tail. The comet came into view this month and skywatchers in the Northern Hemisphere have enjoyed observing the comet. 
+  			</p>
+  			</div>
+  			<div class="mySlides" style="display:none">
+  			<img src="Images/img3.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>Solar campfires</h2><p style="font-size:20px;">The European Space Agency's Solar Orbiter spacecraft swooped by the sun and, with its Extreme Ultraviolet Imager (EUI), took these images of the sun on May 30, 2020. This was the probe's first view of the sun, released today. In these images, you can see the sun's upper atmosphere at a wavelength of 17 nanometers, which is in an extreme part of the ultraviolet region of the electromagnetic spectrum.
+  			</p>
+  			</div>
+  			<div class="mySlides" style="display:none">
+  			<img src="Images/img4.jpeg" style="width:100%;max-width:500px;max-height:280px;"><h2>Minotaur 4 poised for launch</h2><p style="font-size:20px;"> A Minotaur 4 rocket is scheduled to liftoff today from NASA's Wallops Flight Facility on Wallops Island, Virginia. The mission will launch the secret NROL-129 payload made up of four top secret spy satellites into orbit for the U.S. Space Force.
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img5.jpeg" style="width:100%;max-width:500px;max-height:280px;"><h2>Science in space</h2><p style="font-size:20px;">In this photo, taken last week and posted to Twitter July 13, 2020, NASA astronaut Chris Cassidy works on a piece of equipment aboard the International Space Station. In the image, Cassidy works on the equipment, a deployer known as the Nanoracks CubeSat Deployer, on the Japanese Experiment Module slide table. 
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img6.png" style="width:100%;max-width:500px;max-height:280px;"><h2>Electric blue clouds</h2><p style="font-size:20px;">Electric blue streaks through the upper regions of Earth’s atmosphere every summer in the Northern Hemisphere. They usually swirl above the Arctic in the mesosphere (about 50 miles (80 kilometers) above Earth’s surface), but sometimes they form lower in the atmosphere and show up in other places across the globe. 
+
+This image shows an image of noctilucent (or night-shining) clouds on June 23. The image, made using data from NASA’s Aeronomy of Ice in the Mesosphere (AIM) craft, is centered on the North Pole. 
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img7.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>Luminous clouds from space</h2><p style="font-size:20px;">Cosmonaut Ivan Vagner, who is currently on board the International Space Station, snapped this stunning new of luminous clouds on Earth from the station. Luminous clouds are the highest cloud formations in Earth’s atmosphere and they appear at an altitude of 43-59 miles (70-95 kilometers).
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img8.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>A Martian landing site</h2><p style="font-size:20px;">This elevation map of Jezero Crater on Mars shows the site in a rainbow of colors, with lighter colors representing higher elevation. This Martian crater is the chosen landing site for NASA’s Perseverance rover, previously known as the Mars 2020 rover, which is set to launch to the Red Planet this summer. 
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img9.jpeg" style="width:100%;max-width:500px;max-height:280px;"><h2>A stunning Dragon view</h2><p style="font-size:20px;">NASA astronaut Chris Cassidy snapped this photo of SpaceX's Crew Dragon vehicle docked with the International Space Station and with Earth's curvature in the background during a spacewalk with Bob Behnken on Friday, June 26, 2020. During this spacewalk, the pair of astronauts swapped out aging nickel-hydrogen batteries with brand new lithium-ion batteries on the space station. 
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img10.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>A flapping space bat</h2><p style="font-size:20px;">In this image taken by the Hubble Space Telescope and released June 25, 2020,  you can see the star HBC 672, nicknamed "Bat Shadow." The strange feature got its name because it looks like a large, shadowy wing. But its name has even more meaning as, with new Hubble observations from a team led by Klaus Pontoppidan, an astronomer at the Space Telescope Science Institute (STScI) in Baltimore, Maryland, it appears as if the "bat wings" are "flapping." 
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img11.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>A space station solar transit</h2><p style="font-size:20px;">This composite image shows the International Space Station as it transits in front of the sun. Made up of six different frames taken from Fredericksburg, Virginia, this image shows the space station moving at approximately 5 miles per second on June 24, 2020. Five astronauts are currently onboard the space station, including Expedition 63 NASA astronauts Chris Cassidy, Douglas Hurley and Robert Behnken and Roscosmos cosmonauts Anatoly Ivanishin and Ivan Vagner.
+  			</p>
+  			</div><div class="mySlides" style="display:none">
+  			<img src="Images/img12.jpg" style="width:100%;max-width:500px;max-height:280px;"><h2>Cloud art from space</h2><p style="font-size:20px;">Veteran NASA astronaut Doug Hurley, who launched to the International Space Station aboard SpaceX's Crew Dragon craft as part of the company's Demo-2 mission on May 30, snapped this incredible photo from the space station. Hurley's view from space shows striking cloud formations over the South Pacific Ocean. "Cloud art in the South Pacific," Hurley wrote alongside the image which he shared on Twitter. 
+  			</p>
+  			</div>
+		</div>
+		<div id="background" class="item7">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img4.jpeg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(4)"><p class="img__description">Minotaur 4 poised for launch</p>
+		    </div>
+		</div>
+		<div id="background" class="item8">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img5.jpeg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(5)"><p class="img__description">Science in space</p>
+		    </div>
+		</div>
+		<div id="background" class="item9">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img6.png" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(6)"><p class="img__description">Electric blue clouds</p>
+		    </div>
+		</div>
+		<div id="background"  class="item10">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img7.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(7)"><p class="img__description">Luminous clouds from space</p>
+		    </div>
+		</div>
+		<div id="background" class="item11">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img8.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(8)"><p class="img__description">A Martian landing site</p>
+		    </div>
+		</div>
+		<div id="background" class="item12">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img9.jpeg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(9)"><p class="img__description">A stunning Dragon view</p>
+		    </div>
+		</div>
+		<div id="background"  class="item13">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img10.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(10)"><p class="img__description">A flapping space bat</p>
+		    </div>
+		</div>
+		<div id="background" class="item14">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img11.jpg" style="width:100%;cursor:pointer;max-width:200px;" onclick="currentDiv(11)"><p class="img__description">A space station solar transit</p>
+		    </div>
+		</div>
+		<div id="background" class="item15">
+		<div class="w3-col s4">
+		      <img class="demo w3-opacity w3-hover-opacity-off" src="Images/img12.jpg" style="width:100%;cursor:pointer;max-width:200px" onclick="currentDiv(12)"><p class="img__description">Cloud art from space</p>
+		    </div>
+		</div>
+		<!-- <div class="item17">
+			
+		</div> -->
+  	</div>
+  	<div id="footer">
+				<h4 id="pgd"><a href="" > Page Developer </a><h4>
+				<h4 id= "cpr"> &#169; ASTR<span class="o">&#9763;</span>N<span class="o">&#9733;</span>MY </h4>
+			</div>
+<script>
+	document.getElementById("pagecolor").onchange=function(){CheckOptions()};
+	document.getElementById("textcolor").onchange=function(){CheckOptions2()};
+	
+	
+	function CheckOptions(){
+		var pagecolor=document.getElementById("pagecolor").value;
+		var color;
+		switch(pagecolor){
+			case "black":
+			    color= "black";
+			    break;
+		  	case "pale":
+			    color= "#FFFFBF";
+			    break;
+			case "green":
+			    color= "#008F35";
+			    break;
+			default:
+				color="transparent";
+  		}
+  		document.getElementById("main").style.backgroundColor=color;
+	}
+	function CheckOptions2(){
+		var textcolor=document.getElementById("textcolor").value;
+		if(textcolor=="red"){
+			document.getElementById("main").style.color = "black";
+		}
+	}
+	var timer;
+	var myIndex = 0;
+	carousel();
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";  
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}    
+	  x[myIndex-1].style.display = "block";  
+	  timer=setTimeout(carousel, 2000); // Change image every 3 seconds
+	}
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+		
+	function showDivs(n) {
+		
+	  var j;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+
+	  	clearTimeout(timer);
+
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (j = 0; j < x.length; j++) {
+	    x[j].style.display = "none";
+	  }
+	  for (i = 0; j < dots.length; j++) {
+	    dots[j].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-opacity-off";
+
+	  timer=setTimeout(carousel, 7000);
+	}
+
+	
+</script>
+</body>
+</html>
